@@ -1,0 +1,78 @@
+    1  sudo dnf upgrade -y
+    2  sudo useradd -u 1234 user1
+    3  groupadd students
+    4  sudo groupadd students
+    5  getent group students
+    6  man change
+    7  man chage
+    8  passwd user1
+    9  sudo passwd user1
+   10  sudo chage -M 90 user1
+   11  sudo chage -1 user1
+   12  sudo chage -l user1
+   13  id user1
+   14  sudo usermod -aG students user1
+   15  id user1
+   16  clear
+   17  man find
+   18  clear
+   19  /history.out
+   20  sudo /history.out
+   21  sudo find / perm -4000 -type f 2>/dev/null
+   22  sudo find -perm -4000 -type f 2>/dev/null
+   23  clear
+   24  sudo find -perm -4000 -type f 2>/dev/null
+   25  clear
+   26  sudo find / -perm -4000 -type f 2>/dev/null
+   27  ~passwd
+   28  passwd &
+   29  ps -eo pid,ruid,euid,user,cmd | awk 'NR==1 || ($2>=1000 && $3==0)' > ~/processes.out
+   30  cat ~/processes.out
+   31  kill -9 %1
+   32  clear
+   33  cat /etc/shadow
+   34  cp /usr/bin/cat ~/mycat
+   35  sudo chown root:root ~/mycat
+   36  sudo u+s ~/mycat
+   37  sudo chmod u+s ~/mycat
+   38  ls -l ~/mycat
+   39  ~/mycat /etc/shadow
+   40  clear
+   41  touch ~/test.txt
+   42  chown user1 ~/test.txt
+   43  cp /usr/bin/chown ~/mychown
+   44  sudo stcap cap_chown+ep ~/mychown
+   45  sudo setcap cap_chown+ep ~/mychown
+   46  getcap ~/mychown
+   47  ~/mychown user1 ~/test.txt
+   48  ls -l ~/test.txt
+   49  which date timedatectl
+   50  sudo visudo
+   51  sudo -l -U user1
+   52  clear
+   53  which date timedatectl
+   54  sudo visudo
+   55  sudo -l -U user1
+   56  su - user1
+   57  sudo chronyc makestep
+   58  date
+   59  echo "MEPHI student ID: 372260"
+   60  clear
+   61  echo "MEPHI student ID: 372260"
+   62  stat /home/user > ~/stat.out
+   63  stat ~/mycat >> ~/stat.out
+   64  stat ~/mychown >> ~/stat.out
+   65  getcap ~/mychown >> ~/getcap.out
+   66  sudo cp /etc/passwd /etc/shadow /etc/group /etc/sudoers ~/
+   67  sudo chown gleb_adm:gleb_adm ~/passwd ~/shadow ~/group ~/sudoers
+   68  ls -l ~
+   69  stat /home/user1 > ~/stat.out
+   70  `/mycat >> ~/stat.out
+
+   71  stat ~/mycat >> ~/stat.out
+   72  stat ~/mychown >> ~/stat.out
+   73  sudo find / -perm -4000 -type f 2>/dev/null > ~/suid-files.out
+   74  chmod u+r ~/shadow
+   75  ls -l ~
+   76  cat ~/stat.out
+   77  history > ~/history.out
